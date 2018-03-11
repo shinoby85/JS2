@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //обвертка
+        function Container() {
+            this.htmlCode='';
+        }
+        Container.prototype.render=function () {
+            return this.htmlCode;
+        }
+
+        /**
+         *
+         * @param myId
+         * @param myClass
+         * @param items
+         * @constructor
+         */
+
+        //класс меню
+        function Menu(myId,myClass,items) {
+            Container.call(this);
+            this.myId=myId;
+            this.myClass=myClass;
+            this.items=items;
+        }
+        Menu.prototype=Object.create(Container.prototype);
+        Menu.prototype.constructor=Menu;
+
+        Menu.prototype.render=function () {
+            var code='<ul class="'+this.myClass+'" id="'+this.myId+'">';
+            for (var i=0;i<this.items.length;i++){
+                if (this.items[i] instanceof MenuItems){
+                    code+=this.items[i].render();
+                }
+            }
+            code+='</ul>';
+            this.htmlCode=code;
+            return code;
+        }
+
+        //Элементы меню
+        function MenuItems(href,title) {
+            this.href=href;
+            this.title=title;
+        }
+        MenuItems.prototype.render=function () {
+            return '<li><a href="'+this.href+'">'+this.title+'</a></li>';
+        }
+
+        var menu1=new Menu('my-menu','my-menu',[
+            new MenuItems('/','Главное'),
+            new MenuItems('/about/','О компании'),
+            new MenuItems('/blog/','Блог'),
+            new MenuItems('/shops/','Магазины'),
+            new MenuItems('/contacts/','Мы на карте')
+        ]);
+
+        window.onload= function () {
+            document.getElementById('menu').innerHTML=menu1.render();
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="menu"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+function Container() {
+            this.htmlCode='';
+
+        }
+        Container.prototype.render=function () {
+            return this.htmlCode;
+        }
+
+        function Menu(myId,myClass,items) {
+            Container.call(this);
+            this.myId=myId;
+            this.myClass=myClass;
+            this.items=items;
+        }
+
+        Menu.prototype=Object.create(Container.prototype);
+        Menu.prototype.constructor=Menu;
+
+        Menu.prototype.render=function () {
+            var result='<ul class="'+this.myClass+'" id="'+this.myId+'">';
+            for (var i=0;i<this.items.length;i++){
+                if(this.items[i] instanceof MenuItems){
+                    result+=this.items[i].render();
+                }
+            }
+            result+='</ul>';
+            this.htmlCode=result;
+            return result;
+        }
+
+        function MenuItems(href,title) {
+                this.href=href;
+                this.title=title;
+        }
+        MenuItems.prototype.render=function () {
+            return '<li><a href="'+this.href+'">'+this.title+'</a></li>';
+        }
+
+        var menu1=new Menu('my-menu','my-menu',[
+            new MenuItems('/','Главная'),
+            new MenuItems('/about/','О компании'),
+            new MenuItems('/blog/','Блог'),
+            new MenuItems('/shops/','Магазины'),
+            new MenuItems('/contacts/','Мы на карте')
+        ]);
+
+        window.onload=function () {
+            document.getElementById('menu').innerHTML=menu1.render();
+        }
+
