@@ -12,13 +12,6 @@
             return this.htmlCode;
         }
 
-        /**
-         *
-         * @param myId
-         * @param myClass
-         * @param items
-         * @constructor
-         */
 
         //класс меню
         function Menu(myId,myClass,items) {
@@ -42,6 +35,12 @@
             return code;
         }
 
+        Menu.prototype.remove=function () {
+            if(document.getElementById(this.myId)) {
+                document.getElementById(this.myId).parentNode.removeChild(document.getElementById(this.myId));
+            }
+        }
+
         //Элементы меню
         function MenuItems(href,title) {
             this.href=href;
@@ -50,6 +49,16 @@
         MenuItems.prototype.render=function () {
             return '<li><a href="'+this.href+'">'+this.title+'</a></li>';
         }
+        //Класс кнопка
+        function Button(myIdButton,textButton) {
+            this.myIdButton=myIdButton;
+            this.textButton=textButton;
+        }
+        Button.prototype.render=function () {
+            return '<button id="'+this.myIdButton+'">'+this.textButton+'</button>';
+        }
+
+        var button1=new Button('my-menu','Удаление меню');
 
         var menu1=new Menu('my-menu','my-menu',[
             new MenuItems('/','Главное'),
@@ -60,7 +69,7 @@
         ]);
 
         window.onload= function () {
-            document.getElementById('menu').innerHTML=menu1.render();
+            document.getElementById('menu').innerHTML=menu1.render()+button1.render();
         }
 
 
@@ -68,5 +77,6 @@
 </head>
 <body>
     <div id="menu"></div>
+    <!--<button onclick="menu1.remove()">Нажми меня</button>-->
 </body>
 </html>
