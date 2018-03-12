@@ -41,6 +41,31 @@
             }
         }
 
+
+        
+        //Меню со вложенностью
+        function SubMenu(myId,myClass,items,subMenu) {
+            Menu.call(this,myId,myClass,items);
+            this.subMenu=subMenu;
+        }
+        SubMenu.prototype=Object.create(Menu.prototype);
+        SubMenu.prototype.constructor=SubMenu;
+
+        SubMenu.prototype.render=function () {
+            var code='<ul class="'+this.myClass+'" id="'+this.myId+'">';
+            for (var i=0;i<this.items.length;i++){
+                if (this.items[i] instanceof MenuItems){
+                    code+=this.items[i].render();
+                }
+            }
+            code+='</ul>';
+            this.htmlCode=code;
+            return code;
+        }
+
+
+
+
         //Элементы меню
         function MenuItems(href,title) {
             this.href=href;
@@ -60,10 +85,27 @@
 
         var button1=new Button('menu1','Удаление меню');
 
+        var subMenuItems={
+            2: [
+                new MenuItems('http://www.huffingtonpost.com','The Huffington Post'),
+                new MenuItems('http://mashable.com','Mashable'),
+                new MenuItems('http://www.tmz.com','TMZ'),
+                new MenuItems('http://perezhilton.com/','Perezhilton'),
+                new MenuItems('http://gawker.com/','Gawker Media')
+            ],
+            4: [
+                new MenuItems('http://www.oz.by','OZ.BY'),
+                new MenuItems('http://www.ozon.ru/','OZON'),
+                new MenuItems('http://www.amazon.com/','Amazon'),
+                new MenuItems('http://ru.aliexpress.com/','Aliexpress')
+            ]
+        }
+
         var menu1=new Menu('my-menu','my-menu',[
-            new MenuItems('/','Главное'),
+            new MenuItems('/','Главная'),
             new MenuItems('/about/','О компании'),
-            new MenuItems('/blog/','Блог'),
+            new MenuItems('/blog/','Популярные блоги'),
+            new MenuItems('/shops/','Реклама'),
             new MenuItems('/shops/','Магазины'),
             new MenuItems('/contacts/','Мы на карте')
         ]);
