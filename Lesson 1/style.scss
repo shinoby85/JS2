@@ -1,18 +1,5 @@
-
-*{
+* { box-sizing: border-box; }
+body {
   margin: 0;
-  padding: 0;
-}
-.container{
-  margin: 0 auto;
-  padding-top: 20px;
-  background-color: #cfc;
-  width: 300px;
-  height: 400px;
-  .myblok{
-    margin: 0 auto;
-    background-color: #fcc;
-    width: 120px;
-    height: 100px;
-  }
+  background: url(https://html5book.ru/wp-content/uploads/2015/10/background54.png)
 }
