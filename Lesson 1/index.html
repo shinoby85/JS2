@@ -53,23 +53,29 @@
         SubMenu.prototype.constructor=SubMenu;
 
         SubMenu.prototype.render=function () {
+            //Главное меню
             var code='<ul class="'+this.myClass+'" id="'+this.myId+'">';
-
+            //Вывод элементов главного меню
             for (var i=0;i<this.items.length;i++){
+                //Проверка принадлежности элементов к классу MenuItems
                 if (this.items[i] instanceof MenuItems){
-
+                    //Выборка отдельной строки
                     var liCode=this.items[i].render();
+                    //Разделение строки для вставки subMenu
                     var mas=liCode.split('</a>');
+                    //Поиск пункта меню в котором будет вложенность
                     if(i in subMenuItems){
+                        //Формирование новой строки с учетом вложенности
                         liCode+=mas[0]+'</a>';
                         liCode+='<ul class="'+this.subClass+'">';
+                        //Создание пунктов subMenu
                         for (var j=0;j<subMenuItems[i].length;j++){
-
                             liCode+=subMenuItems[i][j].render();
                         }
+                        //Закрытие сформированной строки
                         liCode+='</ul>'+mas[1];
                     }
-
+                    //Добавление строки с пунктом меню к общему коду
                     code+=liCode;
                 }
             }
@@ -99,7 +105,7 @@
         }
 
         var button1=new Button('menu1','Удаление меню');
-
+        //Объект содержит информацию о пунктах фложенного меню. Имя - является указателем на место встаки subMenu в главое меню
         var subMenuItems={
             2: [
                 new MenuItems('http://www.huffingtonpost.com','The Huffington Post'),
