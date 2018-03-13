@@ -44,6 +44,16 @@
 
 
         //Меню со вложенностью
+        /**
+         *
+         * @param myId          ID главного меню
+         * @param myClass       Класс главного меню
+         * @param items         Пункты главного меню
+         * @param subClass      Класс вложенного меню
+         * @param subMenu       Ассоциативный массив, где имя массива - номер пункта для вставки доп. меню,
+         *                      а элементы массива - пункты меню на основе класса Items
+         * @constructor
+         */
         function SubMenu(myId,myClass,items,subClass,subMenu) {
             Menu.call(this,myId,myClass,items);
             this.subClass=subClass;
@@ -142,6 +152,7 @@
 
         window.onload= function () {
             //document.getElementById('menu').innerHTML=menu1.render()+button1.render();
+            //Формирование меню со вложенностью
             document.getElementById('menu').innerHTML=menu2.render()+button1.render();
         }
 
