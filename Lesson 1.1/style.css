@@ -6,4 +6,27 @@
   font-size: 30px;
   font-weight: 600; }
 
+.container-food {
+  margin: 0 auto;
+  width: 90%; }
+
+.field-option {
+  box-shadow: 0 0 5px gray;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 400px 100px;
+  grid-template-areas: 'oFood basket' 'infoBar infoBar'; }
+
+.order-food {
+  grid-area: oFood; }
+
+.basket {
+  grid-area: basket; }
+
+.info-bar {
+  grid-area: infoBar; }
+
+.designBlock {
+  border: 1px dotted gray; }
+
 /*# sourceMappingURL=style.css.map */
