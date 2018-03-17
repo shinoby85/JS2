@@ -5,7 +5,13 @@
     <title>Задание 3*</title>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="shop.js"></script>
+    <script src="shop.js" defer></script>
+    <script>
+        window.onload=function (ev) {
+            var orderFood=document.getElementsByClassName('order-food');
+            orderFood[0].innerHTML=shops[0].outputData();
+        }
+    </script>
 </head>
 <body>
 <div class="container-food">
