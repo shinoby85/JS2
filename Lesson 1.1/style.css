@@ -11,7 +11,7 @@
 
 .container-food {
   margin: 0 auto;
-  width: 90%; }
+  width: 80%; }
 
 .field-option {
   box-shadow: 0 0 5px gray;
@@ -24,7 +24,18 @@
   grid-area: oFood; }
 
 .basket {
-  grid-area: basket; }
+  grid-area: basket;
+  padding: 30px;
+  text-align: center; }
+  .basket h2 {
+    display: block;
+    margin: 0 auto;
+    font-family: Kurale;
+    font-size: 34px;
+    font-style: italic; }
+  .basket .basket-list {
+    margin: 0 auto;
+    height: 95%; }
 
 .info-bar {
   grid-area: infoBar; }

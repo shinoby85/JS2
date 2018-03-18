@@ -12,6 +12,7 @@
         window.onload=function (ev) {
             //var orderFood=document.getElementsByClassName('order-food');
             shops[0].outputData();
+
         }
     </script>
 </head>
@@ -44,9 +45,12 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class="field-option">
-        <div class="order-food designBlock"> </div>
-        <div class="basket designBlock"></div>
-        <div class="info-bar designBlock">3</div>
+        <div id="order-food" class="order-food designBlock"> </div>
+        <div id="basket" class="basket designBlock">
+            <h2>Ваш заказ</h2>
+            <div id="basket-list" class="basket-list"></div>
+        </div>
+        <div id="info-bar" class="info-bar designBlock">3</div>
 
     </div>
 </div>

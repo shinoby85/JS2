@@ -1,4 +1,34 @@
-
+//Массив будет содержать данные для заказа
+var order=[];
+//Добавление позиции к заказу
+function setOrder(orderData) {
+    if (order.length!=0){
+        var flag=false;
+        for(var j=0;j<order.length;j+=2){
+            if(order[j]===orderData[0]){
+                order[j+1]+=orderData[1];
+                flag=true;
+            }
+        }
+        //Запись позиции в массив заказа
+        if(flag===false){
+            order.push(orderData);
+        }
+    }
+    else order.push(orderData);
+}
+//Вывод заказанного товара на экран
+function getOrderInfo() {
+    var infoBar=document.getElementById('info-bar');
+    var str='';
+    for(var i=0;i<order.length;i+=2){
+        for(var j=0;j<shopFood.length;j++){
+            if (order[i][0]==shopFood[j].foodId){
+                str+='<p>Товар: Калории: Количество: Цена: </p><br>';
+            }
+        }
+    }
+}
 
 var Food=function (foodId, category, foodName, foodImg, calories, price, foodNumber, time) {
     this.foodId=foodId;
@@ -10,7 +40,10 @@ var Food=function (foodId, category, foodName, foodImg, calories, price, foodNum
     this.foodNumber=foodNumber;
     this.time=time;
 };
-
+//Получение кол-ва товара
+Food.prototype.getFoodNumber=function () {
+    return this.foodNumber;
+}
 //Получение категории
 Food.prototype.getCategory=function () {
     return this.calories;
@@ -21,7 +54,6 @@ Food.prototype.getIdFood=function () {
 };
 //Проверка на наличие товара
 Food.prototype.validCheck=function (number) {
-
     if(number>this.foodNumber){
         return [false,number-this.foodNumber];
     }
@@ -29,11 +61,16 @@ Food.prototype.validCheck=function (number) {
 };
 //Списание товара
 Food.prototype.reductionGoods=function (number) {
+    number=number||1;  //Заглушка на ввод количества товара
     var validMas=this.validCheck(number);
     if (validMas[0]==true){
         this.foodNumber-=number;
+        return true;
     }
-    else alert('Для заказа позиции не хватает '+validMas[1]+' единиц товара.');
+    else {
+        alert('Извините!!! Заказываемый товар отсутствует.');
+        return false;
+    }
 };
 
 
@@ -58,6 +95,12 @@ var Products=function (myClass, positionFood) {
     this.myClass=myClass;
     this.positionFood=positionFood;
 };
+
+//Редактирование данных
+Products.prototype.editData=function (paramID) {
+
+}
+
 
 //Метод формирует меню
 Products.prototype.outputData=function () {
@@ -94,6 +137,7 @@ Products.prototype.outputData=function () {
                     blokA.style.margin='20px auto 0';
                     blokA.style.padding='10px';
                     blokA.dataset.id=this.positionFood[i].foodId;
+                    //var foodId=this.positionFood[i].foodId;
 
 
                     var imgBlok=document.createElement('img');
@@ -114,12 +158,22 @@ Products.prototype.outputData=function () {
                     pNameBlok.innerText=this.positionFood[i].foodName;
                     blokA.appendChild(pNameBlok);
 
+                    var pFoodPrice=document.createElement('p');
+                    pFoodPrice.style.cssFloat='left';
+                    pFoodPrice.style.lineHeight=NAME_FOOD_LINEHIGHT;
+                    pFoodPrice.style.color='green';
+                    pFoodPrice.style.fontStyle='italic';
+                    pFoodPrice.style.fontSize='20px';
+                    pFoodPrice.style.margin=NAME_FOOD_MARGINE;
+                    pFoodPrice.innerText='Цена: '+this.positionFood[i].price+'р.';
+                    blokA.appendChild(pFoodPrice);
+
                     var pFoodNumber=document.createElement('p');
                     pFoodNumber.style.cssFloat='right';
                     pFoodNumber.style.lineHeight=NAME_FOOD_LINEHIGHT;
                     pFoodNumber.style.fontSize=FOOD_NUMBER_SIZE;
                     pFoodNumber.style.margin=NAME_FOOD_MARGINE;
-                    pFoodNumber.innerText='(Осталось товара: '+this.positionFood[i].foodNumber+')'
+                    pFoodNumber.innerText='(Осталось товара: '+this.positionFood[i].foodNumber+')';
                     blokA.appendChild(pFoodNumber);
 
 
