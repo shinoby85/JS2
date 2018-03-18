@@ -2,6 +2,10 @@
   font-family: Inking;
   src: url(fonts/InkingRegular.ttf);
 }
+@font-face {
+  font-family: Kurale;
+  src: url("fonts/Kurale.ttf");
+}
 .brand-fonts{
   font-family: Inking;
   font-size: 30px;
@@ -15,7 +19,7 @@
   box-shadow: 0 0 5px gray;
   display: grid;
   grid-template-columns: 4fr 2fr;
-  grid-template-rows: 400px 100px;
+  grid-template-rows: 600px 100px;
   grid-template-areas: 'oFood basket'
   'infoBar infoBar';
 }
@@ -30,4 +34,5 @@
 }
 .designBlock{
   border: 1px dotted gray;
+
 }

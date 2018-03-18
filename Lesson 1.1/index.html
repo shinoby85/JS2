@@ -5,11 +5,13 @@
     <title>Задание 3*</title>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.2.1.min.js"></script>
     <script src="shop.js" defer></script>
+    <script src="events.js" defer></script>
     <script>
         window.onload=function (ev) {
-            var orderFood=document.getElementsByClassName('order-food');
-            orderFood[0].innerHTML=shops[0].outputData();
+            //var orderFood=document.getElementsByClassName('order-food');
+            shops[0].outputData();
         }
     </script>
 </head>
@@ -31,19 +33,19 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Размер гамбургера</a></li>
-                    <li><a href="#">Начинки</a></li>
-                    <li><a href="#">Добавки</a></li>
-                    <li><a href="#">Напитки</a></li>
+                <ul id="menu" class="nav navbar-nav">
+                    <li class="active"><a href="#" data-id="menu-hamburger">Гамбургеры</a></li>
+                    <li><a href="#" data-id="menu-filling">Начинки</a></li>
+                    <li><a href="#" data-id="menu-additionally">Добавки</a></li>
+                    <li><a href="#" data-id="menu-drink">Напитки</a></li>
                 </ul>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
     <div class="field-option">
-        <div class="order-food designBlock">1</div>
-        <div class="basket designBlock">2</div>
+        <div class="order-food designBlock"> </div>
+        <div class="basket designBlock"></div>
         <div class="info-bar designBlock">3</div>
 
     </div>
