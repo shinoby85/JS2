@@ -1,12 +1,15 @@
 //Массив будет содержать данные для заказа
 var order=[];
+var timerOrder=0;
+var allSumPrice=0; //Общая сумма заказа
+var allSumCalories=0; //Общее количество калориев
 //Добавление позиции к заказу
 function setOrder(orderData) {
     if (order.length!=0){
         var flag=false;
-        for(var j=0;j<order.length;j+=2){
-            if(order[j]===orderData[0]){
-                order[j+1]+=orderData[1];
+        for(var j=0;j<order.length;j++){
+            if(order[j][0]===orderData[0]){
+                order[j][1]+=orderData[1];
                 flag=true;
             }
         }
@@ -19,16 +22,35 @@ function setOrder(orderData) {
 }
 //Вывод заказанного товара на экран
 function getOrderInfo() {
-    var infoBar=document.getElementById('info-bar');
-    var str='';
-    for(var i=0;i<order.length;i+=2){
+
+    var infoBar=document.getElementById('basket-list');
+    var str='<br>';
+    for(var i=0;i<order.length;i++){
         for(var j=0;j<shopFood.length;j++){
             if (order[i][0]==shopFood[j].foodId){
-                str+='<p>Товар: Калории: Количество: Цена: </p><br>';
+                str+='<p>Товар: "'+shopFood[j].foodName+'".  Калории: '+
+                    (shopFood[j].calories*order[i][1])+'.  Количество: '+
+                    order[i][1]+'.  Цена: '+(shopFood[j].price*order[i][1])+'.</p>';
+                allSumCalories+=parseInt(shopFood[j].calories*order[i][1]);
+                allSumPrice+=parseInt(shopFood[j].price*order[i][1]);
+                timerOrder+=parseInt(shopFood[j].time);
+                break;
             }
         }
     }
+    str+='<br><p class="orderSum">Сумма заказа: '+allSumPrice+'.  Всего калорий: '+allSumCalories+'.</p>'
+    str+='<br><button type="button" data-time="'+timerOrder+'" id="order-button" class="btn btn-success order-button">Оформить заказ</button>';
+    infoBar.innerHTML=str;
+
+    //Обработчик для кнопки
+    document.getElementById('order-button').addEventListener('click',function () {
+        var timeSec=this.dataset.time;
+        var timeMin=Math.floor(timeSec/60);
+        alert('Вам нужно подождать: '+timeMin+' мин. и '+(timeSec-(timeMin*60))+' сек.');
+
+    })
 }
+
 
 var Food=function (foodId, category, foodName, foodImg, calories, price, foodNumber, time) {
     this.foodId=foodId;
@@ -77,7 +99,7 @@ Food.prototype.reductionGoods=function (number) {
 //Массив содержит весь асортимент товара
 var shopFood=[
     new Food('001','hamburger','Малый гамбургер','img/small.jpg',20,50,6,300),
-    new Food('002','hamburger','Средний гамбургер','img/middle.jpg',30,75,0,350),
+    new Food('002','hamburger','Средний гамбургер','img/middle.jpg',30,75,2,350),
     new Food('003','hamburger','Большой гамбургер','img/big.jpg',40,100,7,400),
     new Food('004','filling','Сыр','img/cheese.jpg',20,10,25,10),
     new Food('005','filling','Листья салата','img/salad.jpg',5,20,35,20),
@@ -105,9 +127,9 @@ Products.prototype.editData=function (paramID) {
 //Метод формирует меню
 Products.prototype.outputData=function () {
     var IMG_FOOD='80px';  // Размер блока с изображением
-    var NAME_FOOD_MARGINE='0 30px 0 30px'; //Задание отступа для текста
+    var NAME_FOOD_MARGINE='0 10px 0 10px'; //Задание отступа для текста
     var NAME_FOOD_LINEHIGHT='80px'; //Выравнивание по вериткали
-    var NAME_FOOD_SIZE='35px';
+    var NAME_FOOD_SIZE='26px';
     var NAME_FOOD_FONT_STYLE='Kurale';
     var FOOD_NUMBER_SIZE='14px';
 
@@ -163,7 +185,7 @@ Products.prototype.outputData=function () {
                     pFoodPrice.style.lineHeight=NAME_FOOD_LINEHIGHT;
                     pFoodPrice.style.color='green';
                     pFoodPrice.style.fontStyle='italic';
-                    pFoodPrice.style.fontSize='20px';
+                    pFoodPrice.style.fontSize='18px';
                     pFoodPrice.style.margin=NAME_FOOD_MARGINE;
                     pFoodPrice.innerText='Цена: '+this.positionFood[i].price+'р.';
                     blokA.appendChild(pFoodPrice);

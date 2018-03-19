@@ -6,6 +6,13 @@
   font-family: Kurale;
   src: url("fonts/Kurale.ttf");
 }
+@font-face {
+  font-family: Columbina;
+  src: url("fonts/Columbina.ttf");
+}
+body{
+  background-image: url(img/fone.jpg);
+}
 .brand-fonts{
   font-family: Inking;
   font-size: 30px;
@@ -13,13 +20,18 @@
 }
 .container-food{
   margin: 0 auto;
-  width: 80%;
+
+  width: 90%;
+  background-color: #fff;
+  background-image: url(https://html5book.ru/wp-content/uploads/2015/10/background54.png);
 }
 .field-option{
+  position: relative;
+  top: -10px;
   box-shadow: 0 0 5px gray;
   display: grid;
   grid-template-columns: 4fr 2fr;
-  grid-template-rows: 600px 100px;
+  grid-template-rows: 600px 50px;
   grid-template-areas: 'oFood basket'
   'infoBar infoBar';
 }
@@ -41,6 +53,14 @@
   .basket-list{
     margin: 0 auto;
     height: 95%;
+    font-family: Columbina;
+    text-align: left;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 500;
+    .order-button{
+      float: right;
+    }
   }
 }
 .info-bar{
@@ -49,4 +69,8 @@
 .designBlock{
   border: 1px dotted gray;
 
+}
+.orderSum{
+  font-size: 24px;
+  color: orchid;
 }
