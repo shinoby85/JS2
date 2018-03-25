@@ -1,0 +1,16 @@
+#ls3{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-left: 40px;
+    width: 70%;
+    height: 100px;
+}
+
+#ls3>img:hover{
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 15px purple;
+    outline: 1px solid black;
+
+}

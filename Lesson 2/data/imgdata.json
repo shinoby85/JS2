@@ -1,0 +1,7 @@
+[
+  {"srcsmall":"./img/small-001.jpg", "srcbig":"img/big-001.jpg"},
+  {"srcsmall":"./img/small-002.jpg", "srcbig":"./img/big-002.jpg"},
+  {"srcsmall":"./img/small-003.jpg", "srcbig":"./img/big-003.jpg"},
+  {"srcsmall":"./img/small-004.jpg", "srcbig":"./img/big-004.jpg"},
+  {"srcsmall":"./img/small-005.jpg", "srcbig":"./img/big-005.jpg"}
+]
