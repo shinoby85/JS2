@@ -1,0 +1,17 @@
+.text{
+    font-weight: 600;
+    font-style: italic;
+    font-size: 23px;
+    color: darkblue;
+}
+label{
+    display: block;
+    width: 150px;
+}
+input{
+    width: 250px;
+}
+#field-comments{
+    height: 150px;
+    width: 250px;
+}
