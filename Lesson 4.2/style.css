@@ -1,5 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 fieldset{
     margin: 30px auto;
+    padding: 10px;
     width: 19%;
 }
 .text{
@@ -10,7 +15,20 @@ fieldset{
 }
 label{
     display: block;
-    width: 150px;
+    margin-top: 5px;
+    width: 250px;
+}
+#cityAComplete{
+    width: 250px;
+    border: 1px solid #333;
+    display: none;
+}
+#cityAComplete ul{
+    list-style-type: none;
+}
+#cityAComplete ul li:hover{
+    cursor: pointer;
+    background-color: lightgray;
 }
 input,select{
     width: 250px;
