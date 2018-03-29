@@ -1,3 +1,7 @@
+fieldset{
+    margin: 30px auto;
+    width: 19%;
+}
 .text{
     font-weight: 600;
     font-style: italic;
@@ -8,7 +12,7 @@ label{
     display: block;
     width: 150px;
 }
-input{
+input,select{
     width: 250px;
 }
 #field-comments{
