@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+fieldset{
+    margin: 30px auto;
+    padding: 10px;
+    width: 19%;
+}
+.text{
+    font-weight: 600;
+    font-style: italic;
+    font-size: 23px;
+    color: darkblue;
+}
+label{
+    display: block;
+    margin-top: 5px;
+    width: 250px;
+}
+#cityAComplete{
+    width: 250px;
+    border: 1px solid #333;
+    display: none;
+}
+#cityAComplete ul{
+    list-style-type: none;
+}
+#cityAComplete ul li:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+input,select{
+    width: 250px;
+}
+#field-comments{
+    height: 150px;
+    width: 250px;
+}

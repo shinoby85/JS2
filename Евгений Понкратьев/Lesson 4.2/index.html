@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 4.2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="city.js"></script>
+    <script>
+        window.onload = function () {
+            var btn3=document.getElementById('btn3');
+            btn3.addEventListener('click',function () {
+                var fText=document.getElementById('field-text');
+                var fphone=document.getElementById('field-phone');
+                var fCity=document.getElementById('cityQuery');
+                var fmail=document.getElementById('field-mail');
+                var fcomments=document.getElementById('field-comments');
+                var ftextExp=/^[A-Z|А-Я]{1}[a-z|а-яё]{1,8}(\s|$)/;
+                visualEffect(fText,ftextExp);
+
+                var fPhoneExp=/^\+7\(\d{3}\)\d{3}\-\d{3}$/;
+                visualEffect(fphone,fPhoneExp);
+
+                document.getElementById('city').style.boxShadow='0 0 5px 2px lawngreen';
+
+                visualEffect(fCity,ftextExp);
+
+                var fMailExp=/^\w{1,}((\.|\_|\-)\w{1,})*@\w{1,}\.\w{2,4}$/;
+                visualEffect(fmail,fMailExp);
+                visualEffect(fcomments,/./);
+            });
+
+            //Кнопка очистки формы
+            var btn4=document.getElementById('btn4');
+            btn4.addEventListener('click',function () {
+                resetField(document.getElementById('field-text'));
+                resetField(document.getElementById('field-phone'));
+                resetField(document.getElementById('cityQuery'));
+                resetField(document.getElementById('field-mail'));
+                resetField(document.getElementById('field-comments'));
+            })
+
+        };
+
+
+        //Проверка поля на соответствие регулярному выражению
+        function checkField(fieldForm,regExp) {
+            return regExp.test(fieldForm.value);
+        }
+        //Создание визуальных эффектов для полей ввода
+        function visualEffect(fieldForm,regExp) {
+            if(checkField(fieldForm,regExp)){
+                fieldForm.style.boxShadow='0 0 5px 2px lawngreen';
+            }
+            else fieldForm.style.boxShadow='0 0 5px 2px orange';
+        }
+        //Обнуление полей формы
+        function resetField(fieldForm) {
+            fieldForm.value='';
+            fieldForm.style.boxShadow='';
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+<fieldset>
+    <legend>Обратная связь</legend>
+    <label for="field-text" id="name">Имя</label>
+    <input type="text" id="field-text" placeholder="Петр"><br>
+    <label for="field-phone">Номер телефона</label>
+    <input type="text" id="field-phone" placeholder="+7(000)000-0000"><br>
+    <label for="city">Ваш город</label>
+    <select id="city"></select>
+    <label for="cityQuery">Города по заданию п.3</label>
+    <input type="text" id="cityQuery" placeholder="Город">
+    <div id="cityAComplete"></div>
+    <label for="field-mail">Электронная почта</label>
+    <input type="text" id="field-mail" placeholder="mymail@mail.ru"><br>
+    <label for="field-comments">Доп. информация</label>
+    <input type="text" id="field-comments" placeholder="Произвольный текст"><br><br>
+    <button id="btn3">Отправка</button>
+    <button id="btn4">Очистка формы</button>
+</fieldset>
+</body>
+</html>
