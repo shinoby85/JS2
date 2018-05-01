@@ -140,6 +140,7 @@ Products.prototype.outputData=function () {
             if (myData[1]===this.positionFood[i].category){
                 var blokA=document.createElement('a');
                     blokA.href='#';
+                    blokA.classList.add('food-position');
                     blokA.style.display='block';
                     blokA.style.height='100px';
                     blokA.style.width='85%';

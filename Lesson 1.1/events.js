@@ -25,25 +25,33 @@ $('[data-id="menu-drink"]').click(function () {
 });
 $('#order-food').on('click', function (event) {
     var orderPosition;
+    var errorIndex=1; //Выход из цикла поиска родителя при отсутствии последнего
+    var myEvent=event.target; //сохранение места клика в переменную
     for(var i=0;i<shopFood.length;i++){
-        if(shopFood[i].getIdFood()==event.target.dataset.id) {
+        //Поиск родителя с требуемым классом
+        while (errorIndex<10){
+            if(myEvent.className=='food-position')break;
+            myEvent=myEvent.parentNode;
+            errorIndex++;
+        }
+        if(shopFood[i].getIdFood()==myEvent.dataset.id) {
             var flagOrder=true; //Наличие в позиции товара
             //Уменьшение количества на единицу
             flagOrder=shopFood[i].reductionGoods(1);
             //Обновление информации на кнопках
-            event.target.children[3].innerText = '(Осталось товара: ' + shopFood[i].getFoodNumber() + ')';
+            myEvent.children[3].innerText = '(Осталось товара: ' + shopFood[i].getFoodNumber() + ')';
 
             //Изминение цвета наведения при отсутствии товара
 
             if (shopFood[i].getFoodNumber() <= 0) {
 
-                event.target.onmouseover = function () {
+                myEvent.onmouseover = function () {
                     this.style.boxShadow = '0 0 15px #ff00bf';
                 }
             }
             else {
 
-                event.target.onmouseout=function () {
+                myEvent.onmouseout=function () {
                     this.style.boxShadow ='';
                 }
             }
