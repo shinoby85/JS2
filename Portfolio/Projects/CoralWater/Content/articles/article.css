@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Pattaya');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Infant:400,500,600,700&subset=cyrillic');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #ededed;
+}
+
+.container {
+    width: 1500px;
+    height: 2638px;
+    margin: 0 auto;
+}
+
+.header {
+    /*background-color:  #abeafa;*/
+    background-image: url(../img/img_fone.jpg);
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.header .logo {
+    display: block;
+    width: 111px;
+    height: 111px;
+    background-image: url(../img/logo_1.png);
+    background-repeat: no-repeat;
+    float: left;
+    margin-top: 24px;
+    margin-left: 234px;
+}
+
+.h_social {
+    width: 160px;
+    height: 16px;
+    float: right;
+    margin-top: 50px;
+    margin-right: 229px;
+    text-align: center;
+}
+
+.h_social a {
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+
+.h_social .h_face,
+.h_social .h_twit,
+.h_social .h_gplus,
+.h_social .h_youtub,
+.h_social .h_inst {
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+}
+
+.h_social .h_face {
+    text-align: center;
+    background-image: url(../img/b_face.png);
+}
+
+.h_social .h_twit {
+    background-image: url(../img/b_twit.png);
+}
+
+.h_social .h_gplus {
+    background-image: url(../img/b_gplu.png);
+}
+
+.h_social .h_youtub {
+    background-image: url(../img/b_yout.png);
+}
+
+.h_social .h_inst {
+    background-image: url(../img/b_inst.png);
+}
+
+.header .box_velcom {
+    background-color: #fff51f;
+    width: 220px;
+    height: 300px;
+    clear: both;
+    float: left;
+    margin-top: 201px;
+    margin-left: 165px;
+    padding: 0 25px;
+    /*box-sizing: border-box;*/
+}
+
+.header .box_velcom h4 {
+    font-family: 'Cormorant Infant', serif;
+    font-style: italic;
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 30px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+.header .box_velcom p {
+    font-family: 'Cormorant Infant', serif;
+    color: #333333;
+    font-size: 21px;
+    /* Приближение из-за подстановки шрифтов */
+    font-style: italic;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    font-weight: 700;
+}
+
+
+.header .text {
+    float: right;
+    width: 540px;
+    height: 303px;
+    margin-top: 80px;
+    margin-right: 274px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header .text .label_prod {
+    float: left;
+    background-image: url(product/nabor_zd.jpg);
+    width: 196px;
+    height: 196px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 15px;
+    border: 2px solid #4AB8B9;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.header .text h3 {
+    font-family: 'Cormorant Infant', serif;
+    color: #0475B7;
+    font-size: 35px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 34px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    overflow: hidden;
+}
+
+.header .text p {
+    font-family: 'Cormorant Infant', serif;
+    color: #0475B7;
+    font-size: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: justify;
+}
+
+.header .but_buy {
+    font-family: 'Cormorant Infant', serif;
+    display: block;
+    text-decoration: none;
+    background-color: #fff51f;
+    width: 124px;
+    height: 49px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: -30px;
+    margin-left: 45px;
+}
+
+.header .but_buy:hover {
+    background-color: #ffbe0c;
+}
+
+.header .but_buy:active {
+    background-color: #0bbfaa;
+    top: -29px;
+    left: -1px;
+}
+
+.content {
+    background-color: #ededed;
+   /* min-height: 1800px;*/
+    width: 1500px;
+    padding: 0 165px;
+    box-sizing: border-box;
+}
+
+.box_menu {
+    float: left;
+    width: 270px;
+    position: relative;
+    top: -20px;
+    margin-right: 30px;
+}
+
+.box_menu .head_menu {
+    font-family: Roboto;
+    background-color: #333333;
+    width: 270px;
+    height: 66px;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 66px;
+    padding-left: 42px;
+    box-sizing: border-box;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.menu {
+    margin: 0 auto;
+}
+
+.menu,
+.menu ul {
+    width: 270px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul {
+    position: relative;
+    z-index: -1;
+}
+
+.menu li {
+    position: relative;
+    z-index: 100;
+}
+
+.menu ul li {
+    margin-top: -43px;
+    /* устанавливаем отрицательный отступ от верхнего края для скрытия подменю */
+    -moz-transition: 0.4s linear 0.4s;
+    /* для Firefox 4 */
+    -ms-transition: 0.4s linear 0.4s;
+    /* для IE */
+    -o-transition: 0.4s linear 0.4s;
+    /* для Опера */
+    -webkit-transition: 0.4s linear 0.4s;
+    /* для Chrome и Safari */
+    transition: 0.4s linear 0.4s;
+    /* указываем параметры анимированного перехода */
+}
+
+.menu li a {
+    display: block;
+    background-color: #26d2fc;
+    height: 43px;
+    font-family: 'Roboto';
+    color: #000000;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 43px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+
+.menu li a:hover {
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 900;
+    line-height: 43px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    background-color: #333333;
+}
+
+.menu li:hover {
+    background-color: #333333;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: left;
+}
+
+.menu ul li a {
+    background-color: #84e8ff;
+    font-family: Roboto;
+    color: #333333;
+    
+}
+
+.menu li:hover ul li {
+    margin-top: 0;
+    -moz-transition: 0.4s linear;
+    /* для Firefox 4 */
+    -ms-transition: 0.4s linear;
+    /* для IE */
+    -o-transition: 0.4s linears;
+    /* для Опера */
+    -webkit-transition: 0.4s linears;
+    /* для Chrome и Safari */
+    transition: 0.4s linear;
+    /* указываем параметры анимированного перехода */
+}
+
+.blok_d {
+    background-color: #ededed;
+    width: 270px;
+    height: 700px;
+    margin-top: 30px;
+    float: left;
+    clear: both;
+    /*padding-left: 142px;
+        padding-top: 129px;*/
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blok_d .data_blok {
+    padding: 10px;
+    width: 250px;
+    height: 320px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #26D2FC;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.blok_d .data_blok:hover {
+    background-color: #eafffe;
+}
+
+.blok_d .data_blok img {
+    display: inline-block;
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blok_d .data_blok h3 {
+    font-family: 'Cormorant Infant', serif;
+    color: #333333;
+}
+
+.blok_d .data_blok p {
+    font-family: 'Cormorant Infant', serif;
+    color: #333333;
+    text-align: justify;
+}
+
+.products {
+    margin-left: 30px;
+    background-color: #ededed;
+    width: 870px;
+    overflow: hidden;
+    position: relative;
+    top: -20px;
+    color: #0475B7;
+    text-align: justify;
+    padding: 0 20px;
+    box-sizing: border-box;
+    min-height: 1050px;
+}
+
+.products h2 {
+    display: block;
+    font-family: 'Cormorant Infant', serif;
+    color: #0475B7;
+    font-size: 35px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.products img {
+    display: inline-block;
+    float: left;
+    margin: 0 10px 10px 20px;
+    border: 1px solid #0475B7;
+    width: 400px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.products h3 {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 20px;
+    font-family: monospace;
+    margin: 15px;
+}
+
+.products p,
+.products a {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 18px;
+    text-indent: 25px;
+    font-weight: 700;
+}
+
+.products ul,
+.products ol {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 18px;
+    margin-top: 5px;
+    list-style-position: inside;
+    margin-bottom: 20px;
+}
+
+.text_ul{
+    text-decoration: underline;
+}
+
+.products ul li,
+.products ol li {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer {
+    width: 1500px;
+    height: 288px;
+}
+
+.footer .f_content {
+    background-color: #373737;
+    width: 1500px;
+    height: 241px;
+    padding-top: 39px;
+    box-sizing: border-box;
+}
+
+.footer .f_category {
+    width: 84px;
+    height: 162px;
+    float: left;
+    margin-left: 192px;
+    text-transform: capitalize;
+}
+
+.footer .f_category a,
+.footer .f_account a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer .f_category a:hover,
+.footer .f_account a:hover {
+    text-decoration: none;
+    color: darkorange;
+}
+
+.footer .f_category a:active,
+.footer .f_account a:active,
+.footer .f_about .mail_adr:active,
+.footer .f_end a:active {
+    text-decoration: none;
+    color: #0bbfaa;
+}
+
+.footer .f_category h3 {
+    display: block;
+    margin-bottom: font-family: Raleway;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.footer .f_category ul {
+    list-style-type: none;
+}
+
+.footer .f_category ul li {
+    list-style-type: none;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 12px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.footer .f_account {
+    width: 170px;
+    height: 162px;
+    float: left;
+    margin-left: 200px;
+}
+
+.footer .f_account h3 {
+    font-family: Raleway;
+    color: #ffffff;
+    font-size: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: justify;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.footer .f_account ul li {
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 12px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    list-style-type: none;
+}
+
+.footer .f_about {
+    width: 380px;
+    height: 162px;
+    float: left;
+    margin-left: 200px;
+}
+
+.footer .f_about h3 {
+    display: block;
+    margin-bottom: 7px;
+    font-family: Raleway;
+    color: #ffffff;
+    font-size: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: left;
+}
+
+.footer .f_about .text {
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 12px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 12px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.footer .f_about .phone {
+    display: block;
+    float: left;
+    width: 123px;
+    height: 11px;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23.4px;
+    text-align: left;
+    margin-top: 14px;
+    clear: both;
+}
+
+.footer .f_about .p_number {
+    display: block;
+    float: left;
+    width: 250px;
+    height: 10px;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 14px;
+}
+
+.footer .f_about .mail {
+    display: block;
+    float: left;
+    clear: both;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 23.4px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.footer .f_about a {
+    display: block;
+    float: left;
+    margin-top: 16px;
+    margin-left: 62px;
+    text-decoration: none;
+    font-family: Roboto;
+    color: #faef03;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 22px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.footer .f_about a:hover {
+    color: darkorange;
+}
+
+.f_end {
+    padding-top: 21px;
+    padding-left: 189px;
+    padding-right: 186px;
+    box-sizing: border-box;
+    background-color: #333333;
+    width: 1500px;
+    height: 70px;
+}
+
+.f_end p {
+    display: block;
+    float: left;
+    width: 830px;
+    font-family: Roboto;
+    color: #dad9d9;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 21.6px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.f_end a {
+    font-family: Roboto;
+    color: #faef03;
+    font-size: 14px;
+}
+
+.f_end a:hover {
+    color: darkorange;
+}
+
+.f_end .yout,
+.f_end .inst,
+.f_end .gpl,
+.f_end .twit,
+.f_end .face {
+    display: block;
+    overflow: hidden;
+    float: right;
+    margin-right: 15px;
+}

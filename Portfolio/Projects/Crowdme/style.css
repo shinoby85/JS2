@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i|Nunito:400,400i,600,600i,700,700i,800,800i|Open+Sans:400,400i,600,600i,700,700i,800&subset=cyrillic,cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    width: 1300px;
+    margin: 5px auto;
+    border: 1px solid #848484;
+}
+header{
+    min-height: 85px;
+}
+header .logo{
+    float: left;
+    width: 212px;
+    height: 36px;
+    margin-left: 134px;
+    margin-top: 30px;
+
+}
+header .logo:hover{
+    cursor: pointer;
+}
+header .lg_img{
+    float: left;
+    width: 33px;
+    height: 36px;
+    background-image: url(img/Logo.png);
+}
+header .logo p{
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    color:  #6d6e70;
+    font-size: 31.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 10px;
+
+}
+nav {
+    width: 520px;
+    height: 11px;
+
+    float: left;
+    margin-left: 121px;
+    margin-top: 42px;
+}
+nav ul{
+    list-style: none;
+
+}
+nav ul li{
+    display: inline-block;
+    margin-right:31px;
+
+}
+nav ul li:last-child{
+    margin-right: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color:  rgba(102, 102, 102, 0.67);
+    font-size: 11px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: rgba(102, 102, 102, 0.67);
+}
+
+header .btn_login{
+    float: right;
+    margin-right: 140px;
+    margin-top: 26px;
+    border-radius: 20px;
+    background-color:  rgba(173, 209, 54, 0.81);
+    width: 100px;
+    height: 37px;
+    text-align: center;
+    border: 1px solid rgba(173, 209, 54, 0.81);
+
+}
+header .btn_login:hover{
+    border-color: #707173;
+    cursor: pointer;
+
+}
+header .btn_login p{
+    font-family: 'Open Sans', sans-serif;
+    color:  #ffffff;
+    font-size: 13.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    line-height: 37px;/* Приближение из-за подстановки шрифтов */
+    text-transform: uppercase;
+    width: 100px;
+    height: 37px;
+}
+.banner{
+    height: 570px;
+    background-image: url(img/img_banner.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+
+
+
+}
+.banner:before{
+    content: '';
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.banner h3{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-top: 150px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #ffffff;
+    font-size: 49.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+}
+.banner h3 span{
+    font-family: 'Open Sans', sans-serif;
+    color:  #ffffff;
+    font-size: 35.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+
+}
+.btn_banner{
+    position: relative;
+    border-radius: 10px;
+    background-color:  #99c50a;
+    width: 254px;
+    height: 73px;
+    margin:auto;
+    padding-top: 25px;
+    margin-top: 59px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 20px black;
+}
+.btn_banner p{
+    font-family: 'Open Sans', sans-serif;
+    color:  #ffffff;
+    font-size: 19.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+}
+.btn_banner:hover{
+    cursor: pointer;
+    box-shadow: none;
+    top:1px;
+    left:1px;
+}
+.banner nav{
+    margin-right: 140px;
+    float: right;
+    width:58px;
+    margin-top: 90px;
+}
+.banner nav .btn_baner_right{
+    float: right;
+    width: 13px;
+    height: 20px;
+    background-image: url(img/arrow_right.png);
+    position: relative;
+}
+.banner nav .btn_baner_left{
+    float: left;
+    width: 13px;
+    height: 20px;
+    position: relative;
+    background-image: url(img/arrow_left.png);
+}
+.banner nav .btn_baner_right:hover,
+.banner nav .btn_baner_left{
+    cursor: pointer;
+}
+
+.content .info{
+    text-align: center;
+}
+.content .info img{
+    margin-top: 99px;
+
+}
+.content .info h2{
+    text-transform: uppercase;
+    margin-top: 52px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #515151;
+    font-size: 31.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+
+}
+.content .info p{
+    margin-top: 70px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #515151;
+    font-size: 19.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+
+}
+.inform_partition table{
+    margin: 0 auto;
+}
+.inform_partition table{
+    width: 990px;
+
+    
+}
+.inform_partition table td{
+    width: 300px;
+    text-align: left;
+    border-bottom: 1px solid #E9E9E9;
+}
+.inform_partition table td:nth-child(even){
+    width: 80px;
+}
+.inform_partition table td .num_part{
+    float: left;
+    margin-right: 34px;
+    margin-left: 5px;
+    margin-bottom: 37px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color:  #5f5f5f;
+    text-align: center;
+}
+.inform_partition td:hover{
+
+    border-bottom-color:#add136;
+    cursor: pointer;
+}
+
+.inform_partition td:hover .num_part{
+    background-color: #add136;
+}
+
+.inform_partition td:hover:nth-child(even){
+    border-bottom-color: #E9E9E9;
+    cursor: auto;
+}
+.inform_partition table td .num_part p{
+    font-family: 'Open Sans', sans-serif;
+    color:  #ffffff;
+    font-size: 20.19px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+    line-height: 43px;
+    transform: scaleX(1.0412);
+}
+.inform_partition table td p{
+    font-family: 'Open Sans', sans-serif;
+    color:  #656565;
+    font-size: 33.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    text-align: center;
+}
+.inform_partition .content_info_part{
+    height: 308px;
+    width: 1020px;
+    margin: 0 auto;
+
+}
+.inform_partition .content_info_part img{
+    margin-top: 87px;
+    margin-left: 109px;
+    width: 113px;
+    height: 102px;
+}
+.inform_partition .content_info_part .text_part{
+    float: right;
+    margin-right: 40px;
+    margin-top: 63px;
+    text-align: left;
+}
+.inform_partition .content_info_part .text_part h3{
+    font-family: 'Open Sans', sans-serif;
+    color:  #add136;
+    font-size: 25.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+
+}
+.inform_partition .content_info_part .text_part p{
+    margin-top: 34px;
+    font-family: 'Open Sans', sans-serif;
+    color:  rgba(96, 96, 96, 0.67);
+    font-size: 17.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: left;
+}
+.properties{
+    float: left;
+    width: 648px;
+    height: 305px;
+    background-color: #E0F5FC;
+}
+.properties img,
+.buyer img{
+    width: 133px;
+    height: 112px;
+    margin-left: 100px;
+    margin-top: 84px;
+}
+.properties .a_prop,
+.buyer .a_buyer{
+    width: 260px;
+    margin-top: 46px;
+    margin-right: 73px;
+    float: right;
+    text-align: left;
+}
+.properties .a_prop h3,
+.buyer .a_buyer h3{
+    font-family: 'Montserrat', sans-serif;
+    color:  #515151;
+    font-size: 23.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+}
+.properties .a_prop p,
+.buyer .a_buyer p{
+    font-family: 'Open Sans', sans-serif;
+    color:  #515151;
+    font-size: 17.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    margin-top: 34px;
+}
+
+.properties .btn_prop,
+.buyer .btn_buyer{
+
+    border-radius: 8px;
+    background-color:  #26a6d1;
+    width: 187px;
+    height: 51px;
+    float: right;
+    margin-right: 139px;
+    position: relative;
+    box-shadow: 5px 5px 20px black;
+}
+.buyer .btn_buyer{
+    background-color: #add136;
+}
+.properties .btn_prop:hover,
+.buyer .btn_buyer:hover{
+    top: 1px;
+    left: 2px;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.properties .btn_prop p,
+.buyer .btn_buyer p{
+    line-height: 51px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #ffffff;
+    font-size: 14.84px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+    transform: scaleX(1.0083);
+}
+.buyer{
+    float: left;
+    width: 648px;
+    height: 305px;
+    background-color: #F2F6E9;
+}
+
+.featured_project_content{
+    clear: both;
+    height: 700px;
+    padding: 81px 161px 0;
+
+}
+.featured_project_content h2{
+    font-family: 'Open Sans', sans-serif;
+    color: #515151;
+    font-size: 29.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+}
+.featured_project_content p{
+    display: block;
+    margin-top: 26px;
+    float: left;
+    width: 672px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #8f8f8f;
+    font-size: 17.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: left;
+}
+
+.featured_project_content .btn_BaMember{
+    display: block;
+    border-radius: 9px;
+    border: 1px solid #515151;
+    background-color:  rgba(255, 255, 255, 0.42);
+    width: 181px;
+    height: 50px;
+    float: right;
+    font-family: 'Open Sans', sans-serif;
+    color:  #515151;
+    font-size: 14.83px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    transform: scaleX(1.0094);
+    text-decoration: none;
+}
+.featured_project_content .btn_BaMember:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+.featured_info{
+    clear: both;
+    float: left;
+    margin-top: 66px;
+    display: flex;
+    width: 978px;
+    justify-content: space-between;
+
+}
+.featured_info .blok{
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #E2E2E2;
+    background-color:  rgba(247, 247, 247, 0.71);
+    width: 300px;
+    height: 520px;
+
+}
+.featured_info .blok .blok_img{
+    position: relative;
+    height: 226px;
+}
+.featured_info .blok .blok_img img{
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 226px;
+    top: -74px;
+}
+.featured_info .blok .blok_img .label_img{
+    height: 74px;
+    width: 74px;
+    display: block;
+    position: relative;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+.featured_info .blok .blok_img .price{
+    border-radius: 5px;
+    position: relative;
+    background-color:  #26a6d1;
+    width: 139px;
+    height: 35px;
+    z-index: 10;
+    font-family: 'Open Sans', sans-serif;
+    color:  #ffffff;
+    font-size: 16.37px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: center;
+    line-height: 35px;
+    top: -127px;
+    left: 146px;
+
+}
+
+.featured_info .blok .text{
+    padding: 29px 25px 0;
+}
+.featured_info .blok .text h3{
+    font-family: 'Open Sans', sans-serif;
+    color:  #484747;
+    font-size: 17.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+}
+.featured_info .blok .text p{
+    margin-top: 17px;
+    margin-bottom:20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #484747;
+    font-size: 13.2px; /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: left;
+    max-width: 250px;
+}
+.progress-bar {
+    clear: both;
+    background-color: #E1E1E1;
+    height: 14px;
+    padding: 0;
+    width: 250px;
+    border-radius: 8px;
+    position: relative;
+}
+.progress-bar span{
+    display: inline-block;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #a5df41;
+}
+#pb-width1{
+     width: 40%;
+ }
+#pb-width2{
+    width: 10%;
+}
+#pb-width3{
+    width: 80%;
+}
+.featured_info .blok .text .funded,
+.featured_info .blok .text .d_left{
+    overflow: hidden;
+    display: block;
+    width: 90px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #8d8d8d;
+    font-size: 13.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    margin-bottom: 17px;
+}
+.featured_info .blok .text .d_left{
+    float: right;
+    text-align: right;
+}
+hr{
+    clear: both;
+}
+.featured_info .blok .text a{
+    display: inline-block;
+    height: 16px;
+    float: right;
+    margin-top: 23px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color:  rgba(72, 72, 72, 0.85);
+    font-size: 15.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    background-image: url(img/arrow_a.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 16px;
+    border-bottom: 1px solid rgba(247, 247, 247, 0.71);
+    padding-bottom: 5px;
+
+}
+.featured_info .blok .text a:hover{
+    border-bottom: 1px solid rgba(102, 102, 102, 0.67);
+}
+.community{
+    height: 533px;
+    background-image: url(img/bg.jpg);
+    padding: 137px 161px 0;
+    text-align: center;
+    position: relative;
+    z-index: -10;
+    top: -60px;
+
+
+}
+.community h2{
+    font-family: 'Open Sans', sans-serif;
+    color:  #9ec02d;
+    font-size: 39.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+}
+.community p{
+    margin-top: 42px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #949494;
+    font-size: 19.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: center;
+}
+.community .people1,
+.community .people2{
+    margin-top: 98px;
+    float: left;
+    background-image: url(img/Say.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 397px;
+    height: 240px;
+    padding-top: 25px;
+
+}
+.community .people2{
+    float: right;
+}
+.community .people1 h3,
+.community .people2 h3{
+    font-family: 'Open Sans', sans-serif;
+    color: #9ec02d;
+    font-size: 21.2px; /* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+}
+.community .people1 p,
+.community .people2 p{
+    font-family: 'Open Sans', sans-serif;
+    color: #848484;
+    font-size: 13.2px; /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: center;
+    margin: 22px 39px 0;
+}
+.community .people1 img,
+.community .people2 img{
+    float: left;
+    margin-top: 58px;
+    margin-left: 49px;
+    margin-right:18px;
+    border-radius: 13px;
+}
+.community .people1 .name,
+.community .people2 .name{
+    margin-top: 82px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color:  #494949;
+    font-size: 15.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+}
+footer{
+    height: 150px;
+    text-align: center;
+    clear: both;
+}
+footer .sites{
+    height: 87px;
+    text-align: center;
+}
+footer hr{
+    color: #d5d5d5;
+}
+footer p{
+    font-family: 'Open Sans', sans-serif;
+    color:  #848484;
+    font-size: 13.2px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: center;
+    line-height: 66px;
+}
